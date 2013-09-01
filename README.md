@@ -58,14 +58,11 @@ ript_rule 'allow ssh from office' do
     end
   end
 end
+```
 
 ## Attributes
 
 * `node[:ript][:base_dir] = '/etc/ript.d'` # Storage location for ript files and templates
-
-## Dependencies
-
-* iptables cookbook: http://community.opscode.com/cookbooks/iptables
 
 ## Resources
 
