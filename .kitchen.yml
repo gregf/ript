@@ -19,8 +19,9 @@ platforms:
 suites:
 - name: default
   run_list:
-  - recipe[ript]
   - recipe[minitest-handler]
+  - recipe[ript]
+  - recipe[ript-test]
   attributes:
     ript_keys:
 
