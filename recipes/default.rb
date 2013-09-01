@@ -12,7 +12,7 @@ end
 directory node[:ript][:base_dir] do
   owner "root"
   group "root"
-  mode "0755"
+  mode "0700"
   action :create
 end
 
