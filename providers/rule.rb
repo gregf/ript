@@ -9,6 +9,7 @@ def load_current_resource
     @writer.action :nothing
     new_resource.run_context.resource_collection << @writer
   end
+  new_resource.updated_by_last_action(true)
 end
 
 action :add do

@@ -5,11 +5,12 @@ def load_current_resource
     @ript_service.action :nothing
     new_resource.run_context.run_collection << @ript_service
   end
+  new_resource.updated_by_last_action(true)
 end
 
 action :run do
   ript_service = @ript_service
-  
+
   directory ::File.dirname(new_resource.output_file) do
     recursive true
   end
