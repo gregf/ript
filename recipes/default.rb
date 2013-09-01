@@ -1,12 +1,19 @@
 require 'digest/sha2'
 
 # Install dependencies!
-node[:ript][:package_dependencies].each do |pkg|
+node[:ript][:dependencies][:packages].each do |pkg|
   package pkg
 end
 
 node[:ript][:dependencies][:gems].each do |g_pkg|
   chef_gem g_pkg
+end
+
+directory node[:ript][:base_dir] do
+  owner "root"
+  group "root"
+  mode "0755"
+  action :create
 end
 
 # Install service!
